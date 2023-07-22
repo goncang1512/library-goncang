@@ -1,0 +1,206 @@
+.section-example {
+  padding: 20px 300px 20px 300px;
+}
+
+.pots-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+#boxcheck {
+  display: none;
+}
+
+.toggleLabel {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition-duration: 0.5s;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+#bar-2 {
+  transition-duration: 0.8s;
+}
+
+#bar-1,
+#bar-3 {
+  width: 100%;
+}
+
+#boxcheck:checked + .toggleLabel .bar {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#boxcheck:checked + .toggleLabel #bar-2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+  background-color: red;
+}
+
+#boxcheck:checked + .toggleLabel #bar-1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+  background-color: red;
+}
+
+#boxcheck:checked + .toggleLabel #bar-3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+  background-color: red;
+}
+
+#boxcheck:checked + .toggleLabel {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* teks animation */
+.container-teks {
+  padding: 10px 50px;
+}
+
+.brand-name {
+  width: 450px;
+}
+
+.teks-name {
+  font-size: 20px;
+  font-weight: 600;
+  min-width: 280px;
+  width: 450px;
+}
+
+.teks-name span {
+  position: relative;
+}
+
+.teks-name span::before {
+  content: "developer";
+  color: #147efb;
+  animation: words 25s infinite;
+}
+
+.teks-name span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 105%;
+  background-color: #fff;
+  border-left: 2px solid #000;
+  right: -8px;
+  animation: cursor 0.7s infinite, typing 25s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #fff;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "programmer";
+  }
+  21%,
+  40% {
+    content: "front-end";
+  }
+  41%,
+  60% {
+    content: "web development ";
+  }
+  61%,
+  80% {
+    content: "developer ";
+  }
+  81%,
+  100% {
+    content: "gamer";
+  }
+}
+
+@keyframes typing {
+  10%,
+  14%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+/* PRofil Animation */
+.foto-profil {
+  margin: 100px 50px 50px 50px;
+  animation: morph 9s ease-in-out infinite;
+  background-image: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 18rem;
+  width: 18rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+/* Components */
+@media screen and (max-width: 768px) {
+  .section-example {
+    padding-left: 0px;
+  }
+
+  .figure-fix,
+  .code-fix {
+    width: 100%;
+  }
+}

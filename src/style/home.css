@@ -1,0 +1,70 @@
+.home-container {
+  padding: 20px 120px 20px 120px;
+}
+
+.text-hero {
+  font-size: 50px;
+}
+
+.home-second-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media.istockphoto.com/id/1255928059/photo/young-caucasian-female-programmer-in-glasses-writes-program-code-on-a-laptop.webp?b=1&s=170667a&w=0&k=20&c=Iuu33Tqj2V3cZj4emGMUAvHk3ArF35tWIkxrvV9j0l4=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.right-home-second {
+  margin-right: 30px;
+}
+
+.title-home-second {
+  font-size: 36px;
+}
+
+/* Four */
+.scrool-section {
+  transition: 1s all ease;
+  animation: scrollAnimation 10s linear infinite;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  49% {
+    transform: translateY(-100%);
+  }
+  59% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-hero {
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .home-container {
+    padding: 15px;
+  }
+
+  .home-second-container {
+    gap: 40px;
+  }
+
+  .right-home-second {
+    margin: 0;
+    padding-left: 20px;
+  }
+}
