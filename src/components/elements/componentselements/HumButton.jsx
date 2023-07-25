@@ -247,5 +247,52 @@ const FotoAnimation = () => {
   );
 };
 
-export { TeksAnimation, FotoAnimation };
+const DropDownMenu = () => {
+  return (
+    <>
+      <div>
+        <pre>
+          <p className="text-xl">HTML</p>
+          {`<li className="dropdown list-none">
+                <a
+                  href=""
+                  className="dropbtn text-black cursor-pointer hover:bg-zinc-100 h-12 flex items-center px-3"
+                >
+                  Lainnya
+                </a>
+                <div className="dropdown-content shadow-xl border rounded-md">
+                  <a href="">Profil</a>
+                  <a href="">Setting</a>
+                  <a href="">About Us</a>
+                </div>
+            </li>`}
+        </pre>
+        <p className="text-xl pt-5">CSS</p>
+        <pre>
+          <code>{`.dropdown {
+        display: inline-block;
+        } 
+        .dropbtn {
+          display: inline-block;
+          color: white;
+          text-align: center;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          min-width: 200px;
+          z-index: 1;
+          background-color: white;
+        } 
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        `}</code>
+        </pre>
+      </div>
+    </>
+  );
+};
+
+export { TeksAnimation, FotoAnimation, DropDownMenu };
 export default HumButton;

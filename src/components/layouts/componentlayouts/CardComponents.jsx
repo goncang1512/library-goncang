@@ -2,8 +2,11 @@ import React from "react";
 import HumButton, {
   TeksAnimation,
   FotoAnimation,
+  DropDownMenu,
 } from "../../elements/componentselements/HumButton";
 import CardCompt from "../../fragments/componenfrag/CardCompt";
+import LinkIn from "../../elements/NavbarLink";
+import DropLink from "../../elements/navbarelements/DropLink";
 
 function CardComponents() {
   return (
@@ -41,6 +44,26 @@ function CardComponents() {
         </CardCompt.Figure>
         <CardCompt.Code>
           <FotoAnimation />
+        </CardCompt.Code>
+      </CardCompt>
+      <CardCompt>
+        <CardCompt.Figure>
+          <li className="dropdown list-none">
+            <LinkIn
+              to=""
+              className="dropbtn text-black cursor-pointer hover:bg-zinc-100 h-12 flex items-center px-3"
+            >
+              Lainnya
+            </LinkIn>
+            <div className="dropdown-content shadow-xl border rounded-md">
+              <DropLink>Profil</DropLink>
+              <DropLink>Setting</DropLink>
+              <DropLink>About Us</DropLink>
+            </div>
+          </li>
+        </CardCompt.Figure>
+        <CardCompt.Code>
+          <DropDownMenu />
         </CardCompt.Code>
       </CardCompt>
     </>

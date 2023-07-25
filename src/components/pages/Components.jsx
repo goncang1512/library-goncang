@@ -7,10 +7,10 @@ import CardComponents from "../layouts/componentlayouts/CardComponents";
 function Compnents() {
   return (
     <div>
-      <div className="w-screen">
+      <div className="w-full">
         <Navbar />
       </div>
-      <section className="section-example pt-28 flex flex-wrap justify-evenly gap-10">
+      <section className="section-example pt-28 pb-5 flex flex-wrap gap-10">
         <CardComponents />
       </section>
       <div>

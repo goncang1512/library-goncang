@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../style/components.css";
 
 function CardCompt(props) {
   const { children } = props;
@@ -26,10 +27,12 @@ const Figure = (props) => {
 };
 
 const Code = (props) => {
-  const { children } = props;
+  const { children, classCode } = props;
   return (
     <>
-      <div className="code-fix w-96 h-96 border border-teal-400 relative flex items-center">
+      <div
+        className={`${classCode} hidden code-fix w-96 h-96 border border-teal-400 relative items-start`}
+      >
         <h2 className="absolute top-0 text-center w-full bg-teal-400 py-2 text-white">
           Code
         </h2>
